@@ -9,6 +9,7 @@
 
 ### Association
 - has_many :tweets
+- has_many :users_groups
 - has_many :groups, through: :users_groups
 
 ## tweetsテーブル
@@ -29,10 +30,11 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foregin_key: true|
+|name|string|null: false|
 
 ### Association
 - has_many :tweets
+- has_many :users_groups
 - has_many :users, through: :users_groups
 
 ## users_groupsテーブル
