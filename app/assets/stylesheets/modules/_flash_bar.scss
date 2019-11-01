@@ -1,0 +1,13 @@
+.flash-box{
+  user-select: $style;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: lighter;
+  text-align: center;
+
+  .notice{
+    user-select: $style;
+    background-color: #38aef0;
+    width: 100vw;    
+  }
+}
