@@ -1,45 +1,44 @@
-.flash-box{style: 'user-select: auto'}
-  .notice{style: 'user-select: auto'}
+.flash-box
+  .notice
     グループを作成しました
-.wrapper{style: 'user-select: auto'}
+.wrapper
   = render partial: "shared/side_bar"
-  .chat-main{style: 'user-select: auto'}
-    .main-header{style: 'user-select: auto'}
-      .main-header__left-box{style: 'user-select: auto'}
-        %h2.main-header__left-box__current-group{style: 'user-select: auto'}
+  .chat-main
+    .main-header
+      .main-header__left-box
+        %h2.main-header__left-box__current-group
           sample
-        %ul.main-header__left-box__member-list{style: 'user-select: auto'}
+        %ul.main-header__left-box__member-list
           Member:
-          %li.main-header__left-box__member-list__member{style: 'user-select: auto'}
+          %li.main-header__left-box__member-list__member
             seo
-          %li.main-header__left-box__member-list__member{style: 'user-select: auto'}
+          %li.main-header__left-box__member-list__member
             neko
-      .main-header__edit-btn{style: 'user-select: auto', type: 'submit', value: 'Edit'}
+      .main-header__edit-btn{type: 'submit', value: 'Edit'}
         Edit
-    .messages{style: 'user-select: auto'}
-      .message{style: 'user-select: auto'}
-        .message__upper-info{style: 'user-select: auto'}
-          %p.message__upper-info__talker{style: 'user-select: auto'}
+    .messages
+      .message
+        .message__upper-info
+          %p.message__upper-info__talker
             seo
-          %p.message__upper-info__date{style: 'user-select: auto'}
+          %p.message__upper-info__date
             2019/10/27(Sun) 11:11:11
-        %p.message__text{style: 'user-select: auto'}
+        %p.message__text
           Hello world!
-      .message{style: 'user-select: auto'}
-        .message__upper-info{style: 'user-select: auto'}
-          %p.message__upper-info__talker{style: 'user-select: auto'}
+      .message
+        .message__upper-info
+          %p.message__upper-info__talker
             neko
-          %p.message__upper-info__date{style: 'user-select: auto'}
+          %p.message__upper-info__date
             2019/10/28(Mon) 10:10:10
-        %p.message__text{style: 'user-select: auto'}
+        %p.message__text
           Good bye world!
-    .form{style: 'user-select: auto'}
-      %form.new_message{enctype: 'multipart/form-data', style: 'user-select: auto'}
-        .input-box{style: 'user-select: auto'}
-          %input.input-box__text{placeholder: 'type a message', type: 'text', name: 'massage[content]', style: 'user-select: auto'}
-          %label.input-box__image{for: 'message_image', style: 'user-select: auto'}
-            %i.fa.fa-image{style: 'user-select: auto'}
-              -# = fa_icon 'picture-o', class: 'icon'
-            %input.input-box__image__file{type: 'file', name: 'message[image]', style: 'user-select: auto'}
-        %input.submit-btn{type: 'submit',name: 'commit', value: 'Send', style: 'user-select: auto'}
+    .form
+      %form.new_message{enctype: 'multipart/form-data'}
+        .input-box
+          %input.input-box__text{placeholder: 'type a message', type: 'text', name: 'massage[content]'}
+          %label.input-box__image{for: 'message_image'}
+            %i.fa.fa-image
+            %input.input-box__image__file{type: 'file', name: 'message[image]'}
+        %input.submit-btn{type: 'submit',name: 'commit', value: 'Send'}
 
