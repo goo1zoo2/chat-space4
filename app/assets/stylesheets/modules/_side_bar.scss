@@ -16,8 +16,9 @@
       font-weight: bold;
       &__menu{
         display: flex;
-        &__new-group{
+        &__new-group{          
           margin-left: 0.3rem;
+
         }
         &__edit-user{
           margin-left: 0.3rem;
@@ -51,3 +52,12 @@
   user-select: $style;
   @include fa();
 }
+
+.no-color-change{
+  color: white;
+}
+
+// .icon{
+//   user-select: $style;
+//   @include fa();
+// }
