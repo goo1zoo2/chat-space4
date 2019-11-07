@@ -9,21 +9,16 @@
       %ul.side-header__box__menu
         %li.side-header__box__menu__new-group
           = link_to new_group_path do
-            %i.fa.fa-edit{class: 'no-color-change'}
+            %i.fa.fa-edit{class: 'side-no-color-change'}
         %li.side-header__box__menu__edit-user
           = link_to edit_user_path(current_user) do
-            %i.fa.fa-cog{class: 'no-color-change'}
-
-
-
+            %i.fa.fa-cog{class: 'side-no-color-change'}
   .groups
-    .group
-      %p.group__group-name
-        sample
-      %p.group__latest-message
-        新着メッセージ
-    .group
-      %p.group__group-name
-        sample
-      %p.group__latest-message
-        新着メッセージ
+    - current_user.groups.each do |group|
+      .group
+        -# = link_to group_messages_path(group) do 
+        = link_to '#', class: 'Grouplink' do {}
+          .group__group-name{class: 'side-no-color-change'}
+            = group.name
+          .group__latest-message{class: 'side-no-color-change'}
+            新着メッセージ

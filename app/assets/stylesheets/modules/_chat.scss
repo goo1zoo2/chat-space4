@@ -37,6 +37,10 @@
         border: solid 1px $chatLightBlueColor;
         position: absolute;
         right: 40px;
+        .EDITlink{
+          text-decoration: none;
+          color: $chatLightBlueColor;
+        }
       }
     }
 
@@ -114,10 +118,6 @@
 }
 
 
-// .fa{
-//   user-select: $style;
-//   @include fa();
-// }
 
 .icon{
   user-select: $style;

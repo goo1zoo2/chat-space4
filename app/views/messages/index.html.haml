@@ -1,5 +1,5 @@
 .wrapper
-  = render partial: "shared/side_bar"
+  = render 'shared/side_bar'
   .chat-main
     .main-header
       .main-header__left-box
@@ -12,7 +12,9 @@
           %li.main-header__left-box__member-list__member
             neko
       .main-header__edit-btn{type: 'submit', value: 'Edit'}
-        Edit
+        = link_to 'Edit', "/groups/1/edit", method: :get, class: "EDITlink"
+
+
     .messages
       .message
         .message__upper-info
@@ -38,4 +40,3 @@
             %i.fa.fa-image
             %input.input-box__image__file{type: 'file', name: 'message[image]'}
         %input.submit-btn{type: 'submit',name: 'commit', value: 'Send'}
-
