@@ -114,7 +114,12 @@
 }
 
 
-.fa{
+// .fa{
+//   user-select: $style;
+//   @include fa();
+// }
+
+.icon{
   user-select: $style;
   @include fa();
 }

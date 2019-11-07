@@ -1,13 +1,21 @@
 .chat-side
   .side-header
     .side-header__box
-      %p.side-header__box__user-name
-        seo
+      -# %p.side-header__box__user-name
+      -# ユーザ名を表示させるためビューファイルを変更
+      %h3.side-header__box__user-name
+        -# ユーザーネーム
+        = current_user.name
       %ul.side-header__box__menu
         %li.side-header__box__menu__new-group
-          %i.fa.fa-edit
+          = link_to new_group_path do
+            %i.fa.fa-edit{class: 'no-color-change'}
         %li.side-header__box__menu__edit-user
-          %i.fa.fa-cog
+          = link_to edit_user_path(current_user) do
+            %i.fa.fa-cog{class: 'no-color-change'}
+
+
+
   .groups
     .group
       %p.group__group-name
