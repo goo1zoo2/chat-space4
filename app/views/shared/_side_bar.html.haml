@@ -17,8 +17,8 @@
     - current_user.groups.each do |group|
       .group
         -# = link_to group_messages_path(group) do 
-        = link_to '#', class: 'Grouplink' do {}
+        = link_to group_messages_path(group), class: 'Grouplink' do {}
           .group__group-name{class: 'side-no-color-change'}
             = group.name
           .group__latest-message{class: 'side-no-color-change'}
-            新着メッセージ
+            = group.show_last_message
