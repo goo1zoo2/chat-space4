@@ -8,4 +8,5 @@
   %p.message__text
     -if message.content.present?
       = message.content
+    = image_tag message.image.url if message.image.present?
 
