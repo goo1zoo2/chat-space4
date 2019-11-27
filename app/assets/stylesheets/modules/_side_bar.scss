@@ -1,6 +1,7 @@
 .chat-side{
   user-select: $style;
   width: 300px;
+  height: 100%;
   color: $sideWhiteColor;  
   float: left;
   .side-header{
@@ -29,7 +30,7 @@
 
 
   .groups{
-    height: calc(100vh - 142px);
+    height: calc(100vh - 121px);
     background-color: #2f3e51;
     color: $sideWhiteColor;
     padding: 20px 20px 0;

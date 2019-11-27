@@ -1,5 +1,4 @@
-
-.message
+.message{ data: {id:"#{message.id}"}}
   .message__upper-info
     %p.message__upper-info__talker
       = message.user.name
@@ -8,6 +7,6 @@
   %p.message__text
     -if message.content.present?
       = message.content
-    .message__text__image
+  .image
     = image_tag message.image.url if message.image.present?
 
