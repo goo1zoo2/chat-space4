@@ -1,7 +1,10 @@
 .wrapper{
   user-select: $style;
+  width: 100%;
+  max-width: 100%;
 .chat-main{
     width: calc(100vw - 300px);
+    height: 100%;
     float: left;
     .main-header{
       height: 100px;
@@ -48,7 +51,7 @@
 
 
   .messages{
-    height: calc(100vh - 305px);
+    height: calc(100vh - 285px);
     width: calc(100vw - 300px);
     padding: 46px 40px;
     background-color: #fafafa;
@@ -122,4 +125,8 @@
 .icon{
   user-select: $style;
   @include fa();
+}
+.image > img{
+    max-width: 50%;
+    width: 50%;
 }
