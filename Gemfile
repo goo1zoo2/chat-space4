@@ -42,6 +42,14 @@ group :development, :test do
   gem 'rails-controller-testing' #コントローラのテストに必要
   gem 'factory_bot_rails' #ダミーのインスタンスを作成
   gem 'faker' #ダミーデータを作成
+
+
+
+  gem 'capistrano'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano3-unicorn'
 end
 
 group :development do
