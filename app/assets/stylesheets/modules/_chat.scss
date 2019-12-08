@@ -1,6 +1,6 @@
 .wrapper{
   user-select: $style;
-  width: 100%;
+  width: 100vw;
   max-width: 100%;
 .chat-main{
     width: calc(100vw - 300px);
@@ -96,6 +96,7 @@
             border-style: none;
           }
           &__image{
+            position: absolute;
             font-size: 1.3rem;
             position: absolute;
             top: 10px;

@@ -47,27 +47,28 @@ $(function(){
       alert("メッセージ送信に失敗しました");
     })
   })
-  
-  var reloadMessages = function(){
-    var last_message_id = $('.message:last').data("id");
-    $.ajax({ //ajax通信で以下のことを行う
-      url: './api/messages',
-      type: 'GET',
-      dataType: 'json', 
-      data: {id: last_message_id}
-    })
-    .done(function(messages) {
-      var insertHTML = '';
-      messages.forEach(function(message){
-        insertHTML = buildHTML(message);
-        $('.messages').append(insertHTML);
-        $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast'); 
-      })
 
-    })
-    .fail(function() {
-      alert('error');
-    });
+  var reloadMessages = function(){
+    if (window.location.href.match(/\/groups\/\d+\/\messages/)){
+      var last_message_id = $('.message:last').data("id");
+      $.ajax({ //ajax通信で以下のことを行う
+        url: './api/messages',
+        type: 'GET',
+        dataType: 'json', 
+        data: {id: last_message_id}
+      })
+      .done(function(messages) {
+        var insertHTML = '';
+        messages.forEach(function(message){
+          insertHTML = buildHTML(message);
+          $('.messages').append(insertHTML);
+          $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast'); 
+        })
+      })
+      .fail(function() {
+        alert('error');
+      });
+    }
   };
   setInterval(reloadMessages, 7000);
 });
