@@ -13,34 +13,9 @@
       .main-header__edit-btn{type: 'submit', value: 'Edit'}
         = link_to 'Edit', edit_group_path(@group), class: "EDITlink"
 
-
     .message
       = render partial: 'main_chat'
-    -# .messages
-    -#   .message
-    -#     .message__upper-info
-    -#       %p.message__upper-info__talker
-    -#         seo
-    -#       %p.message__upper-info__date
-    -#         2019/10/27(Sun) 11:11:11
-    -#     %p.message__text
-    -#       = @message
-    -#   .message
-    -#     .message__upper-info
-    -#       %p.message__upper-info__talker
-    -#         neko
-    -#       %p.message__upper-info__date
-    -#         2019/10/28(Mon) 10:10:10
-    -#     %p.message__text
-          Good bye world!
-    -# .form
-    -#   %form.new_message{enctype: 'multipart/form-data'}
-    -#     .input-box
-    -#       %input.input-box__text{placeholder: 'type a message', type: 'text', name: 'massage[content]'}
-    -#       %label.input-box__image{for: 'message_image'}
-    -#         %i.fa.fa-image
-    -#         %input.input-box__image__file{type: 'file', name: 'message[image]'}
-    -#     %input.submit-btn{type: 'submit',name: 'commit', value: 'Send'}
+
     .form
       = form_for [@group, @message] do |f|
         .input-box
