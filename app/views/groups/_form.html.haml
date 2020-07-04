@@ -1,4 +1,5 @@
 = form_for @group do |f|
+  
   - if group.errors.any?
     .chat-group-form__errors
       %h2= "#{group.errors.full_messages.count}件のエラーが発生しました。"
@@ -32,10 +33,11 @@
       = f.label :user_ids, "チャットメンバー", class: 'chat-group-form__label', for: "members"
 
     .chat-group-form__field--right
-
       #chat-group-users.js-add-user
+      
         .chat-group-user.clearfix.js-chat-member
           %input{name: "group[user_ids][]", type: "hidden", value: current_user.id, id: "group_user_ids_#{current_user.id}"}
+          -# - binding.pry
           %p.chat-group-user__name
             = current_user.name
 
